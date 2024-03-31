@@ -87,8 +87,7 @@ class GraphRenderer extends Renderer {
             }
 
             return (
-              <g className={classes(styles.edge, selectedCount && styles.selected, visitedCount && styles.visited)}
-                 key={`${source}-${target}`}>
+              <g className={classes(styles.edge, selectedCount && styles.selected, visitedCount && styles.visited)} key={`${source}-${target}`}>
                 <path d={`M${sx},${sy} L${ex},${ey}`} className={classes(styles.line, isDirected && styles.directed)} />
                 {
                   isWeighted &&
@@ -105,8 +104,7 @@ class GraphRenderer extends Renderer {
           nodes.map(node => {
             const { id, x, y, weight, visitedCount, selectedCount } = node;
             return (
-              <g className={classes(styles.node, selectedCount && styles.selected, visitedCount && styles.visited)}
-                 key={id} transform={`translate(${x},${y})`}>
+              <g className={classes(styles.node, selectedCount && styles.selected, visitedCount && styles.visited)} key={id} transform={`translate(${x},${y})`}>
                 <circle className={styles.circle} r={nodeRadius} />
                 <text className={styles.id}>{id}</text>
                 {

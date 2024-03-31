@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-78128848-1"></script>
     <script>
+/**
+       * Google Analytics script.
+       *
+       * @see https://developers.google.com/analytics/devguides/collection/gtagjs/
+       */
       window.dataLayer = window.dataLayer || [];
 
       function gtag() {
-        dataLayer.push(arguments);
+/**
+         * Pushes events to the dataLayer.
+         *
+         * @see https://developers.google.com/analytics/devguides/collection/gtagjs/events
+         */
+        dataLayer.push(arguments);  //eslint-disable-line prefer-rest-params
+
       }
 
+/*+      /**
+       * Configures the Google Analytics tracker.
+       *
+       * @see https://developers.google.com/analytics/devguides/collection/gtagjs/pages
+       */
       gtag('js', new Date());
+/*+
+      *
+       * Sends an initial pageview event.
+       *
+       * @param {string} trackingId The Google Analytics tracking ID.
+       */
       gtag('config', 'UA-78128848-1');
     </script>
     <meta charset="utf-8">
@@ -29,7 +52,13 @@
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <div id="root"></div>
 <script>
+/*+  *
+   * Preloads the algorithm as a JSON object.
+   *
+   * @type {Object}
+   */
   window.__PRELOADED_ALGORITHM__ = $ALGORITHM;
 </script>
 </body>
 </html>
+
